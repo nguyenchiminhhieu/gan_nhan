@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{a3cd49ea-436d-4e7c-a930-ac1c60d50c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{f272e5c7-efc1-4842-9385-b0f58ea90bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\yaml-cpp">
+      <UniqueIdentifier>{de214aef-2682-4260-8506-aa3aebc330ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\yaml-cpp\contrib">
+      <UniqueIdentifier>{cbd03ba0-2629-4177-858e-c81a631af41c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\yaml-cpp\node">
+      <UniqueIdentifier>{f0a5407e-a99a-4dfc-91d4-741317c503e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\yaml-cpp\node\detail">
+      <UniqueIdentifier>{bbd75497-172a-488c-854c-98433f21d79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\contrib">
+      <UniqueIdentifier>{0ecb4abb-5645-4367-9050-dc0fd5c7e142}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\emitterstate.h">
+      <Filter>include\yaml-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\emitterutils.h">
+      <Filter>include\yaml-cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="src\collectionstack.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\directives.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\exp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\contrib\graphbuilderadapter.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\indentation.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nodebuilder.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nodeevents.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ptr_vector.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regex_yaml.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\regeximpl.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scanner.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scanscalar.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scantag.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\setting.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\singledocparser.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stream.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\streamcharsource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stringsource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tag.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\token.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\parse.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\convert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emit.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emitter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="api.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\binary.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\depthguard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\directives.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emitfromevents.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emitterstate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\emitterutils.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exceptions.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\exp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\contrib\graphbuilder.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\contrib\graphbuilderadapter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\node.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\node_data.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodebuilder.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodeevents.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\null.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ostream_wrapper.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="parse.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\parser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="read.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\regex_yaml.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scanner.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scanscalar.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scantag.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scantoken.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\simplekey.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\singledocparser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stream.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tag.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="src\contrib\yaml-cpp.natvis">
+      <Filter>src\contrib</Filter>
+    </Natvis>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\contrib\yaml-cpp.natvis.md">
+      <Filter>src\contrib</Filter>
+    </None>
+  </ItemGroup>
+</Project>
