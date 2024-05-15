@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.props" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_static|x64">
+      <Configuration>Debug_static</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_static|x64">
+      <Configuration>Release_static</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lib\pillow-resize\src\PillowResize\PillowResize.cc" />
+    <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="VietOCR.cpp" />
+    <ClCompile Include="Vocab.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h" />
+    <ClInclude Include="VietOCR.h" />
+    <ClInclude Include="Vocab.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{953d19d0-5f26-4723-b294-0a4834598d19}</ProjectGuid>
+    <RootNamespace>VietOcrCpp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib\opencv480\OpenCV480_Debug_x64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib\opencv480\OpenCV480_Debug_x64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib\opencv480\OpenCV480_Release_x64.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib\opencv480\OpenCV480_Release_x64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">
+    <OutDir>$(ProjectDir)lib\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">
+    <OutDir>$(ProjectDir)lib\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;YAML_CPP_DLL;yaml_cpp_EXPORTS;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\Yaml-cpp\include;$(SolutionDir)lib\libtorch\include;$(SolutionDir)lib\libtorch\include\torch\csrc\api\include;C:\Users\z230\AppData\Local\Programs\Python\Python37\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1\build\native\include;$(SolutionDir)lib\pillow-resize;$(SolutionDir)lib\pillow-resize\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\include;$(SolutionDir)ppocr;$(SolutionDir)lib\paddle_inference\deploy\cpp_infer;$(SolutionDir)lib\paddle_inference\third_party\install\gflags\include;$(SolutionDir)lib\paddle_inference\paddle\include;C:\Users\vohungvi\Downloads\libtorch-win-shared-with-deps-2.2.1+cpu\libtorch\include;C:\Users\vohungvi\Downloads\libtorch-win-shared-with-deps-2.2.1+cpu\libtorch\include\torch\csrc\api\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_dnn480d.lib;libprotobufd.lib;c10.lib;torch.lib;torch_cpu.lib;$(SolutionDir)lib\Yaml-cpp\lib\Yaml-cppd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\libtorch\lib;$(SolutionDir)ppocr\lib;$(SolutionDir)lib\openssl\lib\vs2017;$(SolutionDir)lib\curl\lib\vs2017;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_static|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;YAML_CPP_DLL;yaml_cpp_EXPORTS;LIB_CPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\Yaml-cpp\include;$(SolutionDir)lib\libtorch\include;$(SolutionDir)lib\libtorch\include\torch\csrc\api\include;C:\Users\z230\AppData\Local\Programs\Python\Python37\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1\build\native\include;$(SolutionDir)lib\pillow-resize;$(SolutionDir)lib\pillow-resize\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\include;$(SolutionDir)ppocr;$(SolutionDir)lib\paddle_inference\deploy\cpp_infer;$(SolutionDir)lib\paddle_inference\third_party\install\gflags\include;$(SolutionDir)lib\paddle_inference\paddle\include;D:\PROJECT\GitHub\pytorch\torch\csrc\api\include;D:\PROJECT\GitHub\pytorch;D:\PROJECT\GitHub\pytorch\aten\src;D:\PROJECT\GitHub\pytorch\build;D:\PROJECT\GitHub\pytorch\build\aten\src;D:\PROJECT\GitVCS\vietocrcs\lib\opencv480\3rdparty\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_dnn480d.lib;libprotobufd.lib;c10.lib;torch.lib;torch_cpu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Project\CV\vietocrcs\libtorch\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;YAML_CPP_DLL;yaml_cpp_EXPORTS;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\Yaml-cpp\include;$(SolutionDir)lib\libtorch\include;$(SolutionDir)lib\libtorch\include\torch\csrc\api\include;C:\Users\z230\AppData\Local\Programs\Python\Python37\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1\build\native\include;$(SolutionDir)lib\pillow-resize;$(SolutionDir)lib\pillow-resize\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\include;$(SolutionDir)ppocr;$(SolutionDir)lib\paddle_inference\deploy\cpp_infer;$(SolutionDir)lib\paddle_inference\third_party\install\gflags\include;$(SolutionDir)lib\paddle_inference\paddle\include;D:\PROJECT\GitHub\pytorch\torch\csrc\api\include;D:\PROJECT\GitHub\pytorch;D:\PROJECT\GitHub\pytorch\aten\src;D:\PROJECT\GitHub\pytorch\build;D:\PROJECT\GitHub\pytorch\build\aten\src;D:\PROJECT\GitVCS\vietocrcs\lib\opencv480\3rdparty\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_dnn480.lib;libprotobuf.lib;c10.lib;torch.lib;torch_cpu.lib;$(SolutionDir)lib\Yaml-cpp\lib\Yaml-cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\libtorch\lib;$(SolutionDir)ppocr\lib;$(SolutionDir)lib\openssl\lib\vs2017;$(SolutionDir)lib\curl\lib\vs2017;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_static|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;YAML_CPP_DLL;yaml_cpp_EXPORTS;WIN32;LIB_CPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\Yaml-cpp\include;$(SolutionDir)lib\libtorch\include;$(SolutionDir)lib\libtorch\include\torch\csrc\api\include;C:\Users\z230\AppData\Local\Programs\Python\Python37\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.DirectML.1.17.1\build\native\include;$(SolutionDir)lib\pillow-resize;$(SolutionDir)lib\pillow-resize\include;$(SolutionDir)packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\include;$(SolutionDir)ppocr;$(SolutionDir)lib\paddle_inference\deploy\cpp_infer;$(SolutionDir)lib\paddle_inference\third_party\install\gflags\include;$(SolutionDir)lib\paddle_inference\paddle\include;D:\PROJECT\GitHub\pytorch\torch\csrc\api\include;D:\PROJECT\GitHub\pytorch;D:\PROJECT\GitHub\pytorch\aten\src;D:\PROJECT\GitHub\pytorch\build;D:\PROJECT\GitHub\pytorch\build\aten\src;D:\PROJECT\GitVCS\vietocrcs\lib\opencv480\3rdparty\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_dnn480.lib;libprotobuf.lib;c10.lib;torch.lib;torch_cpu.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)libtorch\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.1.17.1\build\native\Microsoft.ML.OnnxRuntime.targets'))" />
+  </Target>
+</Project>

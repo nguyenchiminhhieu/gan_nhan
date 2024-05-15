@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\imgproc\include;misc\caffe;misc\tensorflow;misc\onnx;misc\tflite;..\..\3rdparty\include\opencl\1.2;$(SolutionDir);..\..\3rdparty\flatbuffers\include;..\..\3rdparty\protobuf\src;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\imgproc\include;misc\caffe;misc\tensorflow;misc\onnx;misc\tflite;..\..\3rdparty\include\opencl\1.2;$(SolutionDir);..\..\3rdparty\flatbuffers\include;..\..\3rdparty\protobuf\src;..\..\;D:\PROJECT\GitVCS\vietocrcs\lib\opencv480\3rdparty\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -107,7 +107,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\imgproc\include;misc\caffe;misc\tensorflow;misc\onnx;misc\tflite;..\..\3rdparty\include\opencl\1.2;$(SolutionDir);..\..\3rdparty\flatbuffers\include;..\..\3rdparty\protobuf\src;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;include;$(ProjectDir);..\..\modules\core\include;..\..\modules\imgproc\include;misc\caffe;misc\tensorflow;misc\onnx;misc\tflite;..\..\3rdparty\include\opencl\1.2;$(SolutionDir);..\..\3rdparty\flatbuffers\include;..\..\3rdparty\protobuf\src;..\..\;D:\PROJECT\GitVCS\vietocrcs\lib\opencv480\3rdparty\flatbuffers\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589;4819;4244;4267;4018;4355;4800;4251;4996;4146;4305;4127;4100;4512;4125;4389;4510;4610;4702;4456;4457;4065;4310;4661;4506;4309;4189;4592;4125;4267;4127;4244;4512;4702;4456;4510;4610;4800;4701;4703;4505;4458</DisableSpecificWarnings>

@@ -14,7 +14,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
@@ -136,3 +135,16 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+lib/opencv480/3rdparty/libjpeg-turbo/obj/
+lib/opencv480/3rdparty/libpng/obj/
+lib/opencv480/3rdparty/protobuf/obj/
+lib/opencv480/3rdparty/zlib/obj/
+lib/opencv480/modules/core/obj/
+lib/opencv480/modules/dnn/obj/
+lib/opencv480/modules/highgui/obj/
+lib/opencv480/modules/imgcodecs/obj/
+lib/opencv480/modules/imgproc/obj/
+lib/opencv480/modules/ml/obj/
+lib/Yaml-cpp/obj/
+lib/opencv480/modules/lib/Release-x64/
+lib/opencv480/modules/lib/Debug-x64/
