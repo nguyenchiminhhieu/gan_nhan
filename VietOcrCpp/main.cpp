@@ -11,7 +11,10 @@
 
 void Test()
 {
+    std::cout << std::endl;
+
     cv::Mat image = cv::imread("text_4.jpg");
+
     VietOCR vi = VietOCR();
     //StartCountTime("read");
     std::wstring s = vi.ReadMatCropped(image);
