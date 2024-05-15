@@ -150,3 +150,7 @@ lib/opencv480/modules/lib/Release-x64/
 lib/opencv480/modules/lib/Debug-x64/
 .vs/
 packages/Microsoft.ML.OnnxRuntime.1.17.1/
+/VietOcrCpp/x64
+*.pdb
+*.idb
+*.exp

@@ -4,7 +4,7 @@
 
 Repository này fork từ: https://github.com/pbcquoc/vietocr
 
-Bài viết chi tiết: https://thigiacmaytinh.com/port-thu-vien-vietocr-sang-ngon-ngu-c/
+Bài viết chi tiết: https://thigiacmaytinh.com/share-source-code-vietocr-da-port-sang-ngon-ngu-c/
 
 ## Hướng dẫn cách build
 
@@ -15,4 +15,4 @@ Khi build VietOcrCpp_CV480.sln thì Visual Studio sẽ tự động download pac
 
 Kết quả như hình dưới:
 
-![](image/result.png)
+![](image/result1.png)
