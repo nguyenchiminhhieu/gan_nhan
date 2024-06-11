@@ -1,3 +1,7 @@
+# Hướng dẫn training VietOCR
+
+https://thigiacmaytinh.com/huong-dan-training-vietocr-dung-de-nhan-dien-tieng-viet/
+
 ## Requirement
 
 - Python 3.8

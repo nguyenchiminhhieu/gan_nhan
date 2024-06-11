@@ -1,0 +1,6 @@
+gdown==5.2.0
+einops==0.8.0
+imgaug==0.4.0
+prefetch-generator==1.0.3
+lmdb==1.4.1
+numpy==1.23.1
