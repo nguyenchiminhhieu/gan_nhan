@@ -1,15 +1,18 @@
 ﻿#pragma once
 #include "VietOCR.h"
 #include <onnxruntime_cxx_api.h>
-#include "torch/torch.h"
 #include "PillowResize/PillowResize.hpp"
 #include <regex>
 #include <TGMTutil.h>
 #include <TGMTfile.h>
 #include "TGMTdebugger.h"
+#include <numeric>    // For std::accumulate
+#include <functional> // For std::multiplies
+
 
 VietOCR* VietOCR::m_instance = nullptr;
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 VietOCR::VietOCR()
 {
@@ -95,7 +98,7 @@ int VietOCR::resize(int w, int h, int expected_height, int image_min_width, int 
 template <typename T>
 T vectorProduct(const std::vector<T>& v)
 {
-    return accumulate(v.begin(), v.end(), 1, std::multiplies<T>());
+    return std::accumulate(v.begin(), v.end(), 1, std::multiplies<T>());
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -427,12 +430,16 @@ std::wstring VietOCR::translate(cv::Mat img)
         decoder_hidden = decoderOutputHiddenTensorValues;
 
         // Convert to Torch tensor
-        torch::Tensor tensor_output = torch::from_blob(decoderOutputs.data(), { 1, mDecoderOutputDims.at(1) }, torch::kFloat);
+        /*torch::Tensor tensor_output = torch::from_blob(decoderOutputs.data(), { 1, mDecoderOutputDims.at(1) }, torch::kFloat);
 
         auto topoutput = torch::topk(tensor_output, 1);
         torch::Tensor indices = std::get<1>(topoutput);
         int64_t indice = *indices[0].data_ptr<int64_t>();
-        translated_sentence.push_back({ indice });
+        translated_sentence.push_back({ indice });*/
+
+        // Remove libtorch
+        int maxIndex = std::distance(decoderOutputs.begin(), std::max_element(decoderOutputs.begin(), decoderOutputs.end()));
+        translated_sentence.push_back(maxIndex);
 
         max_length += 1;
 

@@ -4,7 +4,6 @@
 #include <fstream>
 #include "VietOCR.h"
 #include "TGMTdebugger.h"
-#include "TGMTutil.h"
 #include "TGMTfile.h"
 
 

@@ -5,23 +5,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="TGMT">
-      <UniqueIdentifier>{fc48abcf-7ec5-4325-b47e-f99c5e80e0a6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pillow">
       <UniqueIdentifier>{4ed176b6-58b2-490a-98b4-3f29c321294f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TGMTcpp">
+      <UniqueIdentifier>{fc48abcf-7ec5-4325-b47e-f99c5e80e0a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp">
-      <Filter>TGMT</Filter>
-    </ClCompile>
-    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp">
-      <Filter>TGMT</Filter>
+      <Filter>TGMTcpp</Filter>
     </ClCompile>
     <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp">
-      <Filter>TGMT</Filter>
+      <Filter>TGMTcpp</Filter>
     </ClCompile>
     <ClCompile Include="Vocab.cpp" />
     <ClCompile Include="VietOCR.cpp" />
@@ -29,26 +26,31 @@
       <Filter>Pillow</Filter>
     </ClCompile>
     <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp">
-      <Filter>TGMT</Filter>
+      <Filter>TGMTcpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp">
+      <Filter>TGMTcpp</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vocab.h" />
     <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h">
-      <Filter>TGMT</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h">
-      <Filter>TGMT</Filter>
+      <Filter>TGMTcpp</Filter>
     </ClInclude>
     <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h">
-      <Filter>TGMT</Filter>
+      <Filter>TGMTcpp</Filter>
     </ClInclude>
     <ClInclude Include="VietOCR.h" />
     <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h">
-      <Filter>TGMT</Filter>
+      <Filter>TGMTcpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h">
+      <Filter>TGMTcpp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\onnxruntime.dll" />
+    <None Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\onnxruntime_providers_shared.dll" />
   </ItemGroup>
 </Project>
